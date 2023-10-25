@@ -5,8 +5,9 @@ WORKDIR /workspace
 ENV USERNAME=dev
 ENV USER_UID=1000
 ENV USER_GID=$USER_UID
-ENV DEBIAN_FRONTEND=noninteractive
 ENV NODE_MAJOR=20
+ENV DEBIAN_FRONTEND=noninteractiv
+ENV TZ=Etc/UTC
 
 # Install OS Dependencies
 RUN apt update
