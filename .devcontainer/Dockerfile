@@ -10,7 +10,7 @@ ENV NODE_MAJOR=20
 
 # Install OS Dependencies
 RUN apt update
-RUN apt install -y sudo git ca-certificates curl gnupg software-properties-common
+RUN apt install -y --no-install-recommends sudo git ca-certificates curl gnupg software-properties-common
 
 RUN groupadd --gid $USER_GID $USERNAME
 RUN useradd --uid $USER_UID --gid $USER_GID -m $USERNAME
@@ -29,7 +29,7 @@ RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesourc
 RUN sudo apt update
 
 # Install App Dependencies
-RUN sudo apt install -y nodejs php8.2 php8.2-mbstring php8.2-pgsql
+RUN sudo apt install -y --no-install-recommends nodejs php8.2 php8.2-mbstring php8.2-pgsql
 
 # Install Additional Tools
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
