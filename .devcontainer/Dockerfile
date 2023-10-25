@@ -37,4 +37,5 @@ RUN chmod 0440 /etc/sudoers.d/$USERNAME
 
 USER $USERNAME
 
-ENV PS1="\u@\H:\w\n\$ "
+SHELL ["/bin/bash", "-lc"]
+
