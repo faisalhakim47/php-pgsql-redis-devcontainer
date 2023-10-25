@@ -1,0 +1,8 @@
+{
+    "dockerComposeFile": "./docker-compose.yaml",
+    "service": "workspace_service",
+    "workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose",
+    "containerUser": "dev",
+    "forwardPorts": [3000, 5432]
+}
